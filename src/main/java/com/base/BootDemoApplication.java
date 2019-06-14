@@ -16,7 +16,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 1.0.0
  */
 @SpringBootApplication
-@MapperScan(basePackages = "com.base.baseLine.dao ")
+@MapperScan(basePackages = "com.base.baseLine.dao")
 public class  BootDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(BootDemoApplication.class);

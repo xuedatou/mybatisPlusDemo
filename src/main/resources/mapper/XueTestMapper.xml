@@ -2,10 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.base.baseLine.dao.XueTestDao">
 
-    <!-- 开启二级缓存 -->
-    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
-    <select id="selectAll" parameterType="String" resultType="XueTest">
-        select * from t_xue_test where AGE ='23' ${ew.customSqlSegment}
+    <select id="selectAll" parameterType="String" resultType="com.base.baseLine.model.XueTest">
+        select * from t_xue_test  ${ew.customSqlSegment}
     </select>
 
+    <select id="myGetAllPage" parameterType="String" resultType="com.base.baseLine.model.XueTest">
+        select * from t_xue_test where AGE = ${age}
+    </select>
 </mapper>

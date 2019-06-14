@@ -34,7 +34,7 @@ private static final long serialVersionUID=1L;
     private String sex;
 
     @TableField("AGE")
-    private String age;
+    private String xxdAge;
 
 
 }

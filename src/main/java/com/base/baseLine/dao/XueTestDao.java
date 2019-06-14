@@ -1,9 +1,13 @@
 package com.base.baseLine.dao;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.base.baseLine.model.XueTest;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.core.toolkit.Constants;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.base.baseLine.model.XueTest;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -18,6 +22,8 @@ import java.util.List;
 @Mapper
 public interface XueTestDao extends BaseMapper<XueTest> {
 
-   List<XueTest> selectAll(Wrapper<XueTest> queryWrapper);
+   List<XueTest> selectAll(@Param(Constants.WRAPPER) Wrapper<XueTest> queryWrapper);
+
+   IPage<XueTest> myGetAllPage(Page page,@Param("age")String age);
 
 }

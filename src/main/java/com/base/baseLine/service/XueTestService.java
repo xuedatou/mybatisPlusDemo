@@ -1,10 +1,10 @@
 package com.base.baseLine.service;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.base.baseLine.model.XueTest;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
+import com.base.baseLine.model.XueTest;
 
 import java.util.List;
 
@@ -18,4 +18,5 @@ import java.util.List;
  */
 public interface XueTestService extends IService<XueTest> {
     List<XueTest> selectAll(Wrapper<XueTest> queryWrapper);
+    IPage<XueTest> myGetAllPage(Page page,String age);
 }
